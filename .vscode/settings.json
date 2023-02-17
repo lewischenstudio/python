@@ -1,0 +1,19 @@
+{
+    // "python.pythonPath": "/home/vagrant/havkonstudio/venv/bin/python",
+    // "python.venvPath": "${workspace}venv",
+    "python.linting.pylintEnabled": false,
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=E231",
+        // "--ignore=E402,F841,F401,E302,E305,E302,E305,E501",
+    ],
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": false,
+}

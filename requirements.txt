@@ -1,0 +1,8 @@
+black
+flake8
+matplotlib
+pytest
+pytest-benchmark
+line-profiler
+psutil
+memory-profiler
