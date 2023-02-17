@@ -10,7 +10,7 @@ from random import uniform
 from particle import Particle, ParticleSimulator
 
 
-@profile
+@profile # type: ignore
 def benchmark_memory():
     particles = [Particle(uniform(-1.0, 1.0), uniform(-1.0, 1.0), uniform(-1.0, 1.0)) for i in range(100000)]
     simulator = ParticleSimulator(particles)

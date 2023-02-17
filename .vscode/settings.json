@@ -1,6 +1,4 @@
 {
-    // "python.pythonPath": "/home/vagrant/havkonstudio/venv/bin/python",
-    // "python.venvPath": "${workspace}venv",
     "python.linting.pylintEnabled": false,
     "editor.formatOnSave": true,
     "python.formatting.provider": "black",

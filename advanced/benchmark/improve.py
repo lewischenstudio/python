@@ -30,7 +30,7 @@ class ParticleSimulator:
     def __init__(self, particles):
         self.particles = particles
 
-    @profile
+    @profile  # type: ignore
     def evolve_fast(self, dt):
         timestep = 0.00001
         nsteps = int(dt / timestep)
