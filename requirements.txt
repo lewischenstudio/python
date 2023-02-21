@@ -4,6 +4,8 @@ joblib
 line-profiler
 matplotlib
 memory-profiler
+numexpr
+pandas
 patricia-trie
 psutil
 pytest
