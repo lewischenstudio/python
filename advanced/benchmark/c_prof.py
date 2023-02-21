@@ -38,9 +38,9 @@ Interpretation
 - ncalls: The number of times the function was called.
 - tottime: The total time spent in the function without taking into account the calls to other functions.
 - cumtime: The time in the function including other function calls.
-- percall: The time spent for a single call of the function--it can be obtained by dividing the total or 
+- percall: The time spent for a single call of the function--it can be obtained by dividing the total or
            cumulative time by the number of calls.
-- filename:lineno: The filename and corresponding line numbers. This information is not available when 
+- filename:lineno: The filename and corresponding line numbers. This information is not available when
                    calling C extensions modules.
 - particle.py:32(evolve) means that it is the evolve function in particle.py that needs tunning
 """

@@ -29,8 +29,8 @@ if __name__ == "__main__":
 Interpretation
 
 - LOAD_FAST loads a reference of the p variable onto the stack
-- LOAD_ATTR loads the y attribute of the item present on top of the stack 
-- UNARY_NEGATIVE and BINARY_TRUE_DIVIDE do arithmetic operations on top-of-stack items. 
+- LOAD_ATTR loads the y attribute of the item present on top of the stack
+- UNARY_NEGATIVE and BINARY_TRUE_DIVIDE do arithmetic operations on top-of-stack items.
 - STORE_FAST store the result from the above operation
 - By analyzing the dis output, we can see that the first version of the loop produces 51
   bytecode instructions while the second gets converted into 35 instructions.

@@ -21,8 +21,8 @@ if __name__ == "__main__":
     benchmark_memory()
 
 
-"""
-$ python -m memory_profiler m_prof.py
+""" # NOQA
+Terminal command: $ python -m memory_profiler m_prof.py
 Filename: C:\Users\lcyc2\dev\python\advanced\benchmark\particle.py
 
 Filename: m_prof.py

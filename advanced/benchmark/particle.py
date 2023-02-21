@@ -86,7 +86,7 @@ def visualize(simulator):
         return (line,)
 
     # Call the animate function each 10 ms
-    anim = animation.FuncAnimation(fig, animate, init_func=init, blit=True, interval=10)
+    anim = animation.FuncAnimation(fig, animate, init_func=init, blit=True, interval=10)  # NOQA
 
     plt.show()
 

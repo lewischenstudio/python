@@ -1,8 +1,10 @@
 black
 flake8
+joblib
+line-profiler
 matplotlib
+memory-profiler
+patricia-trie
+psutil
 pytest
 pytest-benchmark
-line-profiler
-psutil
-memory-profiler
