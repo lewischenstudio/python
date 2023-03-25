@@ -1,5 +1,5 @@
 """
-Write a recursive function called isPalindrome which returns true if the string passed 
+Write a recursive function called isPalindrome which returns true if the string passed
 to it is a palindrome (reads the same forward and backward). Otherwise it returns false.
 
 Step 1: Recursive case - the flow
