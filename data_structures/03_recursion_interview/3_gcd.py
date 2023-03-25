@@ -1,4 +1,5 @@
 """
+Interview Questions - 3
 How to find GCD (Greatest Common Divisor) of two numbers using recursion?
 
 Step 1: Recursive case - the flow
@@ -24,6 +25,7 @@ Step 3: Unintentional case - the constraint
 - Convert negative numbers to positive
 """
 
+
 def gcd(a, b):
     assert int(a) == a and int(b) == b, "The numbers must be integers only"
     if a < 0:
@@ -33,5 +35,6 @@ def gcd(a, b):
     if b == 0:
         return a
     return gcd(b, a % b)
+
 
 print(gcd(36, 48))

@@ -1,6 +1,6 @@
 """
-Write a function called stringifyNumbers which takes in an object and finds all 
-of the values which are numbers and converts them to strings. Recursion would be 
+Write a function called stringifyNumbers which takes in an object and finds all
+of the values which are numbers and converts them to strings. Recursion would be
 a great way to solve this!
 
 Step 1: Recursive case - the flow
@@ -13,7 +13,9 @@ Step 3: Unintentional case - the constraint
 - Object only
 """
 
+
 def stringifyNumbers(obj):
+    assert type(obj) is dict, "Input must be an object!"
     new_obj = {}
     for key, value in obj.items():
         if type(value) is dict:
@@ -25,16 +27,6 @@ def stringifyNumbers(obj):
     return new_obj
 
 
-obj = {
-  "num": 1,
-  "test": [],
-  "data": {
-    "val": 4,
-    "info": {
-      "isRight": True,
-      "random": 66
-    }
-  }
-}
+obj = {"num": 1, "test": [], "data": {"val": 4, "info": {"isRight": True, "random": 66}}}
 
 print(stringifyNumbers(obj))

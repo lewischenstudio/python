@@ -1,5 +1,5 @@
 """
-Write a function called productOfArray which takes in an array of numbers and 
+Write a function called productOfArray which takes in an array of numbers and
 returns the product of them all.
 
 Step 1: Recursive case - the flow
@@ -18,12 +18,14 @@ Step 3: Unintentional case - the constraint
 - Array of float or integer
 """
 
+
 def productOfArray(arr) -> float:
     for i in arr:
         assert float(i) == i or int(i) == i, "Each item in the array must be float or integer!"
     if len(arr) <= 1:
         return arr[0]
-    return arr[0] * productOfArray(arr[1:len(arr)])
+    return arr[0] * productOfArray(arr[1 : len(arr)])
 
-print(productOfArray([1,2,3]))
-print(productOfArray([1,2,3,10]))
+
+print(productOfArray([1, 2, 3]))
+print(productOfArray([1, 2, 3, 10]))

@@ -26,10 +26,12 @@ factorial(-1) ??
 factorial(1.5) ??
 """
 
+
 def factorial(n):
-    assert n >= 0 and int(n) == n, 'The number must be postive integer only!'
+    assert n >= 0 and int(n) == n, "The number must be postive integer only!"
     if n in [0, 1]:
         return 1
     return n * factorial(n - 1)
+
 
 print(factorial(-4))

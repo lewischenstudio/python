@@ -24,6 +24,7 @@ Step 3: Unintentional case - the constraint
 - String only
 """
 
+
 def isPalindrome(strng):
     assert str(strng) == strng, "Input value must be string!"
     str_to_list = list(strng)
@@ -32,12 +33,13 @@ def isPalindrome(strng):
     if len(str_to_list) == 2:
         return str_to_list[0] == str_to_list[1]
     if str_to_list[0] == str_to_list[-1]:
-        return isPalindrome(''.join(str_to_list[1:len(str_to_list)-1]))
+        return isPalindrome("".join(str_to_list[1 : len(str_to_list) - 1]))
     return False
 
-print(isPalindrome('awesome')) # false
-print(isPalindrome('foobar')) # false
-print(isPalindrome('tacocat')) # true
-print(isPalindrome('amanaplanacanalpanama')) # true
-print(isPalindrome('amanaplanacanalpandemonium')) # false
-print(isPalindrome('1001001')) # true
+
+print(isPalindrome("awesome"))  # false
+print(isPalindrome("foobar"))  # false
+print(isPalindrome("tacocat"))  # true
+print(isPalindrome("amanaplanacanalpanama"))  # true
+print(isPalindrome("amanaplanacanalpandemonium"))  # false
+print(isPalindrome("1001001"))  # true

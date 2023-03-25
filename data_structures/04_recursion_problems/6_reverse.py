@@ -14,12 +14,14 @@ Step 3: Unintentional case - the constraint
 - String only
 """
 
+
 def reverse(strng):
     assert isinstance(strng, str), "Input must be a string!"
     str_to_list = list(strng)
     if len(str_to_list) == 1:
         return str_to_list[0]
-    return str_to_list[-1] + reverse(''.join(str_to_list[0:-1]))
+    return str_to_list[-1] + reverse("".join(str_to_list[0:-1]))
 
-print(reverse('python'))
-print(reverse('appmillers'))
+
+print(reverse("python"))
+print(reverse("appmillers"))

@@ -1,7 +1,7 @@
 """
 Write a function factorial which accepts a number and returns the factorial of that number.
-A factorial is the product of an integer and all the integers below it; e.g., 
-factorial four ( 4! ) is equal to 24, because 4 * 3 * 2 * 1 equals 24. 
+A factorial is the product of an integer and all the integers below it; e.g.,
+factorial four ( 4! ) is equal to 24, because 4 * 3 * 2 * 1 equals 24.
 factorial zero (0!) is always 1.
 
 Step 1: Recursive case - the flow
@@ -20,10 +20,12 @@ Step 3: Unintentional case - the constraint
 - factorial(1.5) ??
 """
 
+
 def factorial(num):
-    assert num >= 0 and int(num) == num, 'The number must be postive integer only!'
+    assert num >= 0 and int(num) == num, "The number must be postive integer only!"
     if num in (0, 1):
         return 1
     return num * factorial(num - 1)
+
 
 print(factorial(5))
