@@ -1,9 +1,13 @@
-# Question 7 - Rotate Matrix
+"""
+Given an Image represented by an NxN matrix, write a method to rotate
+the image by 90 degrees.
+"""
 import numpy as np
 
 arr1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+arr1_ = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 arr2 = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
-print("original: ", arr1)
+arr2_ = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
 
 
 def rotateMatrixToRight(matrix):
@@ -44,7 +48,10 @@ def rotateMatrixToLeft(matrix):
     return matrix
 
 
+print("original: \n", arr1)
 print("to left arr1: \n", rotateMatrixToLeft(arr1))
+print("to right arr1: \n", rotateMatrixToRight(arr1_))
+
+print("original: \n", arr2)
 print("to left arr2: \n", rotateMatrixToLeft(arr2))
-print("to right arr1: \n", rotateMatrixToRight(arr1))
-print("to right arr2 \n", rotateMatrixToRight(arr2))
+print("to right arr2 \n", rotateMatrixToRight(arr2_))
