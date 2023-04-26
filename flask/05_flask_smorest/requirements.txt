@@ -1,0 +1,5 @@
+# Data model improvements for our API
+flask
+flask-smorest
+python-dotenv
+marshmallow
