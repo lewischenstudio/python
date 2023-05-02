@@ -1,0 +1,7 @@
+Flask-JWT-Extended # How to set up Flask-JWT-Extended with our app
+Flask-Smorest
+Flask-SQLAlchemy
+passlib # How to add a register endpoint to the REST API
+marshmallow
+python-dotenv
+gunicorn
