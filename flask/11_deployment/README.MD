@@ -22,3 +22,11 @@ Docker command line
 ```
 docker run -dp 5000:5000 -w /app -v $(pwd):/app IMAGE_NAME sh -c "flask run -host 0.0.0.0"
 ```
+
+
+### Get a deployed PostgreSQL database
+[ElephantSQL](https://www.elephantsql.com/)
+
+### Use PostgreSQL locally and in production
+
+DATABASE_URL=postgresql://qxfmazxs:3123cMDI123JK12K3JLDSAM@many.db.elephanntsql.com/siodcme 
