@@ -2,7 +2,7 @@
 
 [Github Link](https://github.com/tecladocode/python-refresher)
 
-#### Table of contents
+#### Table of Contents
 - Introduction to this section
 - Access the code for this section here
 - Variables in Python
