@@ -2,7 +2,7 @@
 Single Source Shortest Path
 Time complexity: O(V+E)
 Space complexity: O(V+E)
-A -- B
+A -- B # noqa
 |    |\ 
 |    | \ 
 |    |  \ 
@@ -31,6 +31,7 @@ class Graph:
                 new_path = list(path)
                 new_path.append(adjacent)
                 queue.append(new_path)
+        return queue
 
 
 customDict = {
@@ -42,5 +43,19 @@ customDict = {
     "g": ["f"],
 }
 
+
+customDict = {
+    "a": ["c", "d", "b"],
+    "b": ["j"],
+    "c": ["g"],
+    "d": [],
+    "e": ["f", "a"],
+    "f": ["i"],
+    "g": ["d", "h"],
+    "h": [],
+    "i": [],
+    "j": [],
+}
+
 g = Graph(customDict)
-print(g.bfs("a", "f"))
+print(g.bfs("a", "e"))

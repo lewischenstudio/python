@@ -13,7 +13,7 @@ E    |
 | \  |
 |  \ |
 H    F --- G
-"""
+"""  # noqa
 
 from collections import defaultdict
 

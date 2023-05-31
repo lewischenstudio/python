@@ -14,7 +14,7 @@ D --- E
  \   /
   \ /
    F
-"""
+"""  # noqa
 
 
 class Graph:

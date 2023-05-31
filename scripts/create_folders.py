@@ -1,0 +1,67 @@
+import os
+
+sessions = [
+    "course_introduction",
+    "getting_going_with_go",
+    "hands_on_exercises",
+    "the_fundamentals_of_go",
+    "hands_on_exercises",
+    "programming_fundamentals_for_beginners",
+    "your_development_environment",
+    "go_mod_and_dependency_management",
+    "hands_on_exercises",
+    "housekeeping_hash_algorithms",
+    "control_flow",
+    "hands_on_exercises",
+    "array_slice",
+    "hands_on_exercises",
+    "map",
+    "hands_on_exercises",
+    "course_update",
+    "exercises_ninja_level_5",
+    "functions",
+    "exercises_ninja_level_6",
+    "pointers",
+    "exercises_ninja_level_7",
+    "application",
+    "exercises_ninja_level_8",
+    "concurrency",
+    "exercises_ninja_level_9",
+    "channels",
+    "exercises_ninja_level_10",
+    "error_handling",
+    "exercises_ninja_level_11",
+    "writing_documentation",
+    "exercises_ninja_level_12",
+    "testing_benchmarking",
+    "exercises_ninja_level_13",
+    "farewell",
+    "repetition_leads_to_mastery",
+    "introduction",
+    "installing_go",
+    "your_development_environment",
+    "computer_fundamentals",
+    "language_fundamentals",
+    "control_flow",
+    "functions",
+    "data_structures_array",
+    "data_structures_slice",
+    "data_structure_map",
+    "data_structure_struct",
+    "interfaces",
+    "concurrency",
+    "channels",
+    "applied_concurrency",
+    "concurrency_challenges",
+    "concurrency_resources",
+    "error_handling",
+    "farewell",
+]
+
+for i in range(len(sessions)):
+    name = sessions[i]
+    i += 1
+    if i < 10:
+        i = f"0{i}"
+    os.mkdir(os.path.join(os.getcwd(), f"{i}_{name}"))
+print(os.getcwd())

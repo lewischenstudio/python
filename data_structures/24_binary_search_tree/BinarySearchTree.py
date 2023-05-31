@@ -17,12 +17,16 @@ def insertNode(rootNode, nodeValue):
         rootNode.data = nodeValue
     elif nodeValue <= rootNode.data:
         if rootNode.leftChild is None:
-            rootNode.leftChild = BSTNode(nodeValue)
+            temp = BSTNode(nodeValue)
+            rootNode.leftChild = temp
+            temp.parent = rootNode
         else:
             insertNode(rootNode.leftChild, nodeValue)
     else:
         if rootNode.rightChild is None:
-            rootNode.rightChild = BSTNode(nodeValue)
+            temp = BSTNode(nodeValue)
+            rootNode.rightChild = temp
+            temp.parent = rootNode
         else:
             insertNode(rootNode.rightChild, nodeValue)
     return "The node has been successfully inserted"
@@ -58,13 +62,20 @@ def levelOrderTraversal(rootNode):
     else:
         customQueue = queue.Queue()
         customQueue.enqueue(rootNode)
+        depth = 0
         while not (customQueue.isEmpty()):
             root = customQueue.dequeue()
             print(root.value.data)
+            added = False
             if root.value.leftChild is not None:
+                depth += 1
+                added = True
                 customQueue.enqueue(root.value.leftChild)
             if root.value.rightChild is not None:
+                if not added:
+                    depth += 1
                 customQueue.enqueue(root.value.rightChild)
+    print("depth: ", depth)
 
 
 def searchNode(rootNode, nodeValue):

@@ -179,9 +179,28 @@ def deleteAVL(rootNode):
     return "The AVL has been successfully deleted"
 
 
-newAVL = AVLNode(5)
-newAVL = insertNode(newAVL, 10)
-newAVL = insertNode(newAVL, 15)
-newAVL = insertNode(newAVL, 20)
-deleteAVL(newAVL)
-levelOrderTraversal(newAVL)
+# initialize the root node
+newAVL = AVLNode(55)
+# newAVL = insertNode(newAVL, 10)
+# newAVL = insertNode(newAVL, 15)
+# newAVL = insertNode(newAVL, 20)
+# newAVL = insertNode(newAVL, 55)
+
+arr1 = [77, 44, 22, 99, 88, 90, 95, 54, 33, 35]
+arr2 = [70, 44, 22, 60, 35, 88, 75, 95, 54, 33]
+arr3 = [35, 22, 33, 44, 54, 70, 60, 88, 75, 95]
+for value in arr2:
+    newAVL = insertNode(newAVL, value)
+# newAVL = insertNode(newAVL, 77)
+# newAVL = insertNode(newAVL, 44)
+# newAVL = insertNode(newAVL, 22)
+# newAVL = insertNode(newAVL, 99)
+# newAVL = insertNode(newAVL, 88)
+# newAVL = insertNode(newAVL, 90)
+# newAVL = insertNode(newAVL, 95)
+# newAVL = insertNode(newAVL, 54)
+# newAVL = insertNode(newAVL, 33)
+# newAVL = insertNode(newAVL, 35)
+# deleteAVL(newAVL)
+preOrderTraversal(newAVL)
+# levelOrderTraversal(newAVL)

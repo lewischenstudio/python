@@ -173,3 +173,4 @@ def deleteBT(rootNode):
 
 
 inOrderTraversal(newBT)
+levelOrderTraversal(newBT)
