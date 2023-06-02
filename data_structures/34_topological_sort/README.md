@@ -29,9 +29,10 @@ Work
 ```
 **Question**: if all these actions are given and how we will identify order of actions?
 
-**Answer**: Topological Sort. It will identify the dependencies between these actions, and we will start from the parent and continue to the children. There
-might be a different order of actions from the topological sort, but the
-dependencies will never be violated.
+**Answer**: Topological Sort. It will identify the dependencies between these actions, 
+and we will start from the parent and continue to the children. There might be a 
+different order of actions from the topological sort, but the dependencies will 
+never be violated.
 
 
 
