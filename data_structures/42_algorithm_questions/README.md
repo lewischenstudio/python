@@ -24,7 +24,7 @@ out whether there is a route from S to E.
 - If we encounter the destination node during the above process, we return True
 - Mark visited nodes as visited
 
-![Route Between Nodes](https://github.com/lcycstudio/python/blob/master/data_structures/42_interview_questions/1_RouteBetweenNodes.png)
+![Route Between Nodes](https://github.com/lcycstudio/python/tree/master/data_structures/42_interview_questions/1_RouteBetweenNodes.png)
 
 
 
@@ -42,7 +42,7 @@ Recursively add value to the binary search tree node class using the left subtre
 
 Given a binary search tree, design an algorithm which creates a linked list of all the nodes at each depth (ie , if you have a tree with depth D, you’ll have D linked lists)
 
-![List of Depths](https://github.com/lcycstudio/python/blob/master/data_structures/42_interview_questions/3_ListofDepth.png)
+![List of Depths](https://github.com/lcycstudio/python/tree/master/data_structures/42_interview_questions/3_ListofDepth.png)
 
 
 
@@ -66,7 +66,7 @@ Implement a function to check if a binary tree is a Binary Search Tree.
 ### Question 6: In-order Successor in BST - LeetCode 285
 Write an algorithm to find the next node (i.e in-order successor) of given node in a binary search tree. You may assume that each node has a link to its parent.
 
-![In-order Successor in BST](https://github.com/lcycstudio/python/blob/master/data_structures/42_interview_questions/6_Successor.png)
+![In-order Successor in BST](https://github.com/lcycstudio/python/tree/master/data_structures/42_interview_questions/6_Successor.png)
 
 
 
@@ -79,4 +79,4 @@ You are given a list of projects and a list of dependencies (which is a list of 
 
 Design an algorithm and write code to find the first common ancestor of two nodes in a binary tree. Avoid storing additional nodes in a data structure. NOTE: This is not necessarily a binary search tree.
 
-![In-order Successor in BST](https://github.com/lcycstudio/python/blob/master/data_structures/42_interview_questions/8_FirstCommonAncestor.png)
+![In-order Successor in BST](https://github.com/lcycstudio/python/tree/master/data_structures/42_interview_questions/8_FirstCommonAncestor.png)

@@ -65,7 +65,7 @@ Queue: A B C D G E F F F
 | Negative, weighted, undirected | X       |
 | Negative, weighted, directed   | X       |
 
-![Why does BFS not work with weighted Graph](https://github.com/lcycstudio/python/blob/master/data_structures/35_shortest_path/bfs_not_work.png)
+![Why does BFS not work with weighted Graph](https://github.com/lcycstudio/python/tree/master/data_structures/35_shortest_path/bfs_not_work.png)
 
 
 ### Why does DFS not work for SSSP?
@@ -73,6 +73,6 @@ Queue: A B C D G E F F F
 DFS has the tendency to go "as far as possible" from the source, so it can never
 find the shortest path.
 
-![Why does DFS not work for SSSP](https://github.com/lcycstudio/python/blob/master/data_structures/35_shortest_path/dfs_not_work.png)
+![Why does DFS not work for SSSP](https://github.com/lcycstudio/python/tree/master/data_structures/35_shortest_path/dfs_not_work.png)
 
 

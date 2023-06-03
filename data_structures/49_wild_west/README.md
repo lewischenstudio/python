@@ -1,59 +1,54 @@
 ## Section 49: The Wild West
 
 #### Table of Contents
-- VERY IMPORTANT NOTE! PLEASE READ!
-- Coding Exercise 56: Singly Linked List - Push
-- Solution to Singly Linked List - Push
-- Coding Exercise 57: Singly Linked List - Pop
-- Solution to Singly Linked List - Pop
-- Coding Exercise 58: Singly Linked List - Get
-- Solution to Singly Linked List - Get
-- Coding Exercise 59: Singly Linked List - Insert
-- Solution to Singly Linked List - Insert
-- Coding Exercise 60: Singly Linked List - Rotate
-- Solution to Singly Linked List - Rotate
-- Coding Exercise 61: Singly Linked List - Set
-- Solution to Singly Linked List - Set
-- Coding Exercise 62: Divide and Conquer - countZeroes
-- Solution to Divide and Conquer - countZeroes
-- Coding Exercise 63: Divide and Conquer - sortedFrequency
-- Solution to Divide and Conquer - sortedFrequency
-- Coding Exercise 64: Divide and Conquer - findRotatedIndex
-- Solution to Divide and Conquer - findRotatedIndex
-- Coding Exercise 65: Singly Linked List - Remove
-- Solution to Singly Linked List - Remove
-- Coding Exercise 66: Insertion Sort
-- Solution to Insertion Sort
-- Coding Exercise 67: Bubble Sort
-- Solution to Bubble Sort
-- Coding Exercise 68: Sorting with Pivot : Quicksort
-- Solution to Sorting with Pivot : Quicksort
-- Coding Exercise 69: Stack - Push
-- Solution to Stack - Push
-- Coding Exercise 70: Stack - Pop
-- Solution to Stack - Pop
-- Coding Exercise 71: Stack with Two Queues
-- Solution to Stack with Two Queues
-- Coding Exercise 72: Queue - Enqueue
-- Solution to Queue - Enqueue
-- Coding Exercise 73: Binary Search Tree - Insert
-- Solution to Binary Search Tree - Insert
-- Coding Exercise 74: Binary Search Tree - Find
-- Solution to Binary Search Tree - Find
-- Coding Exercise 75: Binary Search Tree - DFSPreOrder
-- Solution to Binary Search Tree - DFSPreOrder
-- Coding Exercise 76: Binary Search Tree - DFSInOrder
-- Solution to Binary Search Tree - DFSInOrder
-- Coding Exercise 77: Binary Search Tree - DFSPostOrder
-- Solution to Binary Search Tree - DFSPostOrder
-- Coding Exercise 78: Binary Search Tree - Remove
-- Solution to Binary Search Tree - Remove
-- Coding Exercise 79: Binary Search Tree - Check If Balanced
-- Solution to Binary Search Tree - Check If Balanced
-- Coding Exercise 80: Max Binary Heap - Insert
-- Solution to Max Binary Heap - Insert
-- Coding Exercise 81: Min Binary Heap - Insert
-- Solution to Min Binary Heap - Insert
-- Coding Exercise 82: Max Binary Heap - Extract Max
-- Solution to Max Binary Heap - Extract Max
-- Coding Exercise 83: Graph - Add Vertex
+- Coding Exercise 01: Singly Linked List - Push
+- Coding Exercise 02: Singly Linked List - Pop
+- Coding Exercise 03: Singly Linked List - Get
+- Coding Exercise 04: Singly Linked List - Insert
+- Coding Exercise 05: Singly Linked List - Rotate
+- Coding Exercise 06: Singly Linked List - Set
+- Coding Exercise 07: Divide and Conquer - countZeroes
+- Coding Exercise 08: Divide and Conquer - sortedFrequency
+- Coding Exercise 09: Divide and Conquer - findRotatedIndex
+- Coding Exercise 10: Singly Linked List - Remove
+- Coding Exercise 21: Insertion Sort
+- Coding Exercise 12: Bubble Sort
+- Coding Exercise 13: Sorting with Pivot : Quicksort
+- Coding Exercise 14: Stack - Push
+- Coding Exercise 15: Stack - Pop
+- Coding Exercise 16: Stack with Two Queues
+- Coding Exercise 17: Queue - Enqueue
+- Coding Exercise 18: Binary Search Tree - Insert
+- Coding Exercise 19: Binary Search Tree - Find
+- Coding Exercise 20: Binary Search Tree - DFSPreOrder
+- Coding Exercise 21: Binary Search Tree - DFSInOrder
+- Coding Exercise 22: Binary Search Tree - DFSPostOrder
+- Coding Exercise 23: Binary Search Tree - Remove
+- Coding Exercise 24: Binary Search Tree - Check If Balanced
+- Coding Exercise 25: Max Binary Heap - Insert
+- Coding Exercise 26: Min Binary Heap - Insert
+- Coding Exercise 27: Max Binary Heap - Extract Max
+- Coding Exercise 28: Graph - Add Vertex
+
+
+### Coding Exercise 01: Singly Linked List - Push
+Implement the following on the SinglyLinkedList class:
+
+`push`
+
+This function should take in a value and add o node to the end of the SinglyLinkedList. It should return the SinglyLinkedList.
+
+**Examples**
+```python
+singlyLinkedList = SinglyLinkedList()
+singlyLinkedList.push(5)  # Success
+singlyLinkedList.length   # 1
+singlyLinkedList.head.val # 5
+singlyLinkedList.tail.val # 5
+ 
+singlyLinkedList.push(10)    # Success
+singlyLinkedList.length      # 2
+singlyLinkedList.head.val    # 5
+singlyLinkedList.head.next.val  # 10
+singlyLinkedList.tail.val    # 10
+```

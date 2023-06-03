@@ -13,13 +13,13 @@
 Dijkstra's algorithm is to find the shortest path between two nodes in
 weighted, directed graphs.
 
-![Dijkstra's Algorithm for SSSP](https://github.com/lcycstudio/python/blob/master/data_structures/36_dijsktra/dijkstra.png)
+![Dijkstra's Algorithm for SSSP](https://github.com/lcycstudio/python/tree/master/data_structures/36_dijsktra/dijkstra.png)
 
 
 
 ### Dijkstra Implementation
 
-![Dijkstra's Algorithm for SSSP](https://github.com/lcycstudio/python/blob/master/data_structures/36_dijsktra/graph.png)
+![Dijkstra's Algorithm for SSSP](https://github.com/lcycstudio/python/tree/master/data_structures/36_dijsktra/graph.png)
 
 
 

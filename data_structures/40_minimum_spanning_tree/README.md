@@ -19,7 +19,7 @@ minimum total edge.
 - Which bridge should be constructed so that all islands are accessible and 
 the cost is minimum
 
-![Minimum Spanning Tree](https://github.com/lcycstudio/python/blob/master/data_structures/40_minimum_spanning_tree/mst.png)
+![Minimum Spanning Tree](https://github.com/lcycstudio/python/tree/master/data_structures/40_minimum_spanning_tree/mst.png)
 
 
 ### Disjoint Set
