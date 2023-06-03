@@ -5,20 +5,11 @@
 - Where does the name of DP come from?
 - Top Down with Memoization
 - Bottom Up with Tabulation
-- Top Down vs Bottom Up
 - Is Merge Sort Dynamic Programming?
 - Number Factor Problem using Dynamic Programming
-- Number Factor : Top Down and Bottom Up
 - House Robber Problem using Dynamic Programming
-- House Robber : Top Down and Bottom Up
 - Convert one string to another using Dynamic Programming
-- Coding Exercise 45: Convert String using Bottom Up
-- Solution to Convert String using Bottom Up
 - Zero One Knapsack using Dynamic Programming
-- Coding Exercise 46: Zero One Knapsack - Top Down
-- Solution to Zero One Knapsack - Top Down
-- Coding Exercise 47: Zero One Knapsack - Bottom Up
-- Solution to Zero One Knapsack - Bottom Up
 
 
 ### What is Dynamic Programming? (Overlapping property)
@@ -278,38 +269,95 @@ def houseRobberBU(houses):
 ```
 
 
-### House Robber : Top Down and Bottom Up
-
-
-
 ### Convert one string to another using Dynamic Programming
 
+#### Problem Statement
+- S1 and S2 are given strings
+- Convert S2 to S1 using delete, insert or replace operations
+- Find the minimum count of edit operations
+
+**Example**
+- S1 = "table"
+- S2 = "tgable"
+
+Delete "g" --> S2 = "tble" \
+Insert "c" --> S2 = "tcble" \
+Replace "a" --> S2 = "table"
+
+Delete --> f(2,3)
+Insert --> f(3,2)
+Replace --> f(3,3)
 
 
-### Coding Exercise 45: Convert String using Bottom Up
+#### Pseudocode Top Down Approach
+```
+findMinOperation(s1, s2, index1, index2, memo):
+  If index1 == len(s1):
+    return len(s2) - index2
+  If index2 == len(s2)
+    return len(s1) - index1
+  If s1[index1] == s2[index2]
+    return findMinOperation(s1, s2, index1+1, index2+1, memo)
+  Else
+    dictKey = str(index1) + str(index2)
+    If dictKey not in memo:
+      deleteOp = 1 + findMinOperation(s1, s2, index1, index2+1, memo)
+      insertOp = 1 + findMinOperation(s1, s2, index1+1, index2, memo)
+      replaceOp = 1 + findMinOperation(s1, s2, index1+1, index2+1, memo)
+      memo[dictKey] = min(deleteOp, insertOp, replaceOp)
+    return memo[dictKey]
+```
 
-
-
-### Solution to Convert String using Bottom Up
+![String Conversion DP](https://github.com/lcycstudio/python/blob/master/data_structures/45_dynamic_programming/string_conversion_dp.png)
 
 
 
 ### Zero One Knapsack using Dynamic Programming
 
+#### Problem Statement
+- Given the weights and profits of N items
+- Find the maximum profit within given capacity of C
+- Items cannot be broken
 
+**Example 1**
+| **Mango**  | **Apple**  | **Orange** | **Banana** |
+|------------|------------|------------|------------|
+| Weight: 3  | Weight: 1  | Weight: 2  | Weight: 5  |
+| Profit: 31 | Profit: 26 | Profit: 17 | Profit: 72 |
 
-### Coding Exercise 46: Zero One Knapsack - Top Down
+**Knapsack Capacity**: 7
 
+#### Pseudocode Top Down Approach
+```
+zoKnapsack(items, capacity, currentIndex, memo):
+  dictKey = str(currentIndex) + str(capacity)
+  If capacity <= 0 or currentIndex < 0 or currentIndex > len(items):
+    return 0
+  Elif dictKey in memo:
+    return memo[currentIndex]
+  Elif currentItemWeight <= capacity:
+    Profit1 = currentItemProfit + zoKnapsack(items, capacity - currentItemsWeight, nextItem)
+    Profit2 = zoKnapsack(items, capacity - currentItemsWeight, nextItem)
+    memo[dictKey] = max(Profit1, Profit2)
+    return memo[dictKey]
+  Else
+    return 0
+```
 
-
-### Solution to Zero One Knapsack - Top Down
-
-
-
-### Coding Exercise 47: Zero One Knapsack - Bottom Up
-
-
-
-### Solution to Zero One Knapsack - Bottom Up
-
-
+#### Pseudocode Bottom Up Approach
+```python
+def zoKnapsackBU(profits, weights, capacity):
+  if capacity <= 0 or len(profits) == 0 or len(weights) != len(profits):
+    return 0
+  numberOfRows = len(profits) + 1
+  dp = [[0 for i in range(capacity+2)] for j in range(numberOfRows)]
+  for row in range(numberOfRows-2,-1,-1):
+    for column in range(1, capacity+1):
+      profit1 = 0
+      profit2 = 0
+      if weights[row] <= column:
+        profit1 = profits[row] + dp[row+1][column-weights[row]]
+      profit2 = dp[row+1][column]
+      dp[row][column] = max(profit1, profit2)
+  return dp[0][capacity]
+```

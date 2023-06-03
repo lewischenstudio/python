@@ -293,14 +293,15 @@ Max(Option1, Option2, Option3)
 #### Pseudocode
 ```
 findCLS(s1, s2, index1, index2):
-  If index1 == len(s1) or index2 == len(s20):
+  If index1 == len(s1) or index2 == len(s2):
     return 0
   If s1[index1] == s2[index2]:
-    return 1 + findCLS(s1, s2, index1+1, index2+1)
+    op1 = 1 + findCLS(s1, s2, index1+1, index2+1)
+    return op1
   Else
-    op1 = findCLS(s1, s2, index1, index2+1)
     op2 = findCLS(s1, s2, index1+1, index2)
-  return max(op1, op2)
+    op3 = findCLS(s1, s2, index1, index2+1)
+  return max(op2, op3)
 ```
 
 
@@ -338,11 +339,11 @@ Max(Option1, Option2, Option3)
 findLPS(s, startIndex, endIndex):
   If startIndex > endIndex:
     return 0
-  If s1[startIndex] == s2[endIndex]:
+  If s[startIndex] == s[endIndex]:
     return 2 + findLPS(s, startIndex+1, endIndex-1)
   Else
     op1 = findLPS(s, startIndex, endIndex-1)
-    op2 = findLPS(s, startIndex, endIndex)
+    op2 = findLPS(s, startIndex+1, endIndex)
   return max(op1, op2)
 ```
 
