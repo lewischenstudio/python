@@ -1,4 +1,4 @@
-## Recursion Problems
+## Section 23: Recursion Challenge Problems
 
 #### Table of Content
 - Problem - 1 Write a function called power which accepts a base and an exponent.

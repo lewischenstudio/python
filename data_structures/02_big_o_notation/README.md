@@ -1,11 +1,25 @@
 ## Section 2: Big O Notation
 
-#### What is Big O?
+#### Table of Contents
+- What is Big O?
+- Big O Notations - Theta , Omega and Big O
+- Big O - O(1)
+- Big O - O(N)
+- Drop Constants
+- Big O - O(n^2)
+- Drop Non Dominant Terms
+- Big O - O(logN)
+- Space Complexity
+- Different Terms for Input - Add vs Multiply
+- How to measure the codes using Big O?
+
+
+### What is Big O?
 Big O is the language and metric we use to describe the efficiency of algorithms.
 
 Time complexity is a way of showing how the runtime of a function increases as the size of input increases.
 
-#### Types of Runtimes
+### Big O Notations - Theta , Omega and Big O
 - O(N), O(N^2), O(2^N)
 - Time complexity: O(wh)
 
@@ -17,14 +31,14 @@ Time complexity is a way of showing how the runtime of a function increases as t
 #### Runtime Complexities
 Number of operations vs number of elements
 
-###### O(1)
+### Big O - O(1)
 - It is a constant time complexity
 - It is a horizontal line on the graph
 ```python
 def number_squared(n):
     return n * n
 ```
-###### O(N)
+### Big O - O(N)
 - It is a proportional straight line on the graph
 - Programs with parallel loops are also O(N)
 ```python
@@ -35,7 +49,7 @@ def print_items(n):
         print(j)
 ```
 
-###### O(N^2)
+### Big O - O(n^2)
 - It is a proportional curved line on the graph, in the shape of exponential function.
 ```python
 def print_items(n):
@@ -44,7 +58,7 @@ def print_items(n):
             print(i, j)
 ```
 
-###### O(LogN)
+### Big O - O(logN)
 - It is a relatively flat line on the graph, although not as flat as O(1).
 - O(LogN) is mathematically analogous to `log_2^N`, e.g., `log_2^8=3` and `log_2^1048576=20`.
 

@@ -1,6 +1,16 @@
 ## Section 7: Top 10 Big O Interview Questions
 
-### Interview Questions - 1
+#### Table of Contents
+- Question 1 - Product and Sum
+- Question 2 - Print Pairs
+- Question 3 - Print Unordered Pairs
+- Question 4 - Print Unordered Pairs 2 Arrays
+- Question 5 - Print Unordered Pairs 2 Arrays 100000 Units
+- Question 6 - Reverse
+- Question 7 - O(N) Equivalents
+
+
+### Qestion 1 - Product and Sum
 What is the runtime of the code below?
 
 ```python
@@ -18,7 +28,7 @@ def foo(array):
 Time Complexity: O(N)
 
 
-### Interview Questions - 2
+### Question 2 - Print Pairs
 What is the runtime of the code below?
 ```python
 def printPairs(array):
@@ -29,7 +39,7 @@ def printPairs(array):
 Time Complexity: O(N^2)
 
 
-### Interview Questions - 3
+### Question 3 - Print Unordered Pairs
 What is the runtime of the code below?
 ```python
 def printUnorderedPairs(array):
@@ -67,8 +77,8 @@ n * n / 2 = n^2 / 2 --> O(N^2)
 Time Complexity: O(n^2)
 
 
-### Interview Questions - 4
-What is the runtime of the code below?
+### Question 4 - Print Unordered Pairs 2 Arrays
+Question 4 - Print Unordered Pairs 2 Arrays
 ```python
 def printUnorderedPairs(arrayA, arrayB):
     for i in range(0, len(arrayA)): # O(n^2)
@@ -81,7 +91,7 @@ b = len(arrayB) \
 Time Complexity: O(ab)
 
 
-### Interview Questions - 5
+### Question 5 - Print Unordered Pairs 2 Arrays 100000 Units
 What is the runtime of the code below?
 ```python
 def printUnorderedPairs(arrayA, arrayB):
@@ -96,7 +106,7 @@ b = len(arrayB) \
 Time Complexity: O(ab)
 
 
-### Interview Questions - 6
+### Question 6 - Reverse
 What is the runtime of the code below?
 ```python
 def reverse(array):
@@ -113,7 +123,7 @@ Time Complexity: O(N)
 
 
 
-### Interview Questions - 7
+### Question 7 - O(N) Equivalents
 Which of the following are equivalent to O(N)? Why?
 ```
 1. O(N + P), where P < N/2
