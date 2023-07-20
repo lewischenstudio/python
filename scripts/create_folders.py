@@ -1,67 +1,32 @@
 import os
 
 sessions = [
-    "course_introduction",
-    "getting_going_with_go",
-    "hands_on_exercises",
-    "the_fundamentals_of_go",
-    "hands_on_exercises",
-    "programming_fundamentals_for_beginners",
-    "your_development_environment",
-    "go_mod_and_dependency_management",
-    "hands_on_exercises",
-    "housekeeping_hash_algorithms",
-    "control_flow",
-    "hands_on_exercises",
-    "array_slice",
-    "hands_on_exercises",
-    "map",
-    "hands_on_exercises",
-    "course_update",
-    "exercises_ninja_level_5",
-    "functions",
-    "exercises_ninja_level_6",
-    "pointers",
-    "exercises_ninja_level_7",
-    "application",
-    "exercises_ninja_level_8",
-    "concurrency",
-    "exercises_ninja_level_9",
-    "channels",
-    "exercises_ninja_level_10",
-    "error_handling",
-    "exercises_ninja_level_11",
-    "writing_documentation",
-    "exercises_ninja_level_12",
-    "testing_benchmarking",
-    "exercises_ninja_level_13",
-    "farewell",
-    "repetition_leads_to_mastery",
-    "introduction",
-    "installing_go",
-    "your_development_environment",
-    "computer_fundamentals",
-    "language_fundamentals",
-    "control_flow",
-    "functions",
-    "data_structures_array",
-    "data_structures_slice",
-    "data_structure_map",
-    "data_structure_struct",
-    "interfaces",
-    "concurrency",
-    "channels",
-    "applied_concurrency",
-    "concurrency_challenges",
-    "concurrency_resources",
-    "error_handling",
-    "farewell",
+    "Introduction",
+    "A Quick Refresher - Basic Review",
+    "Variables and Memory",
+    "Numeric Types",
+    "Function Parameters",
+    "First-Class Functions",
+    "Scopes, Closures and Decorators",
+    "Tuples as Data Structures and Named Tuples",
+    "Modules, Packages and Namespaces",
+    "Python Updates",
+    "Extras"
 ]
 
 for i in range(len(sessions)):
     name = sessions[i]
+    folder_name = name.replace(" ", "_").lower()
     i += 1
     if i < 10:
         i = f"0{i}"
-    os.mkdir(os.path.join(os.getcwd(), f"{i}_{name}"))
-print(os.getcwd())
+    folder_path = os.path.join(os.getcwd(), f"scripts/{i}_{folder_name}")
+    file_path = os.path.join(folder_path, "README.md")
+    os.mkdir(folder_path)
+    with open(file_path, "w") as file_:
+        file_.write(f"## Section {i}: {name}\n")
+        file_.write("\n")
+        file_.write("#### Table of Contents\n")
+    file_.close()
+
+print("done")

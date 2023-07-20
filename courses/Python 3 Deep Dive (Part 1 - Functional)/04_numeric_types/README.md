@@ -1,0 +1,35 @@
+## Section 04: Numeric Types
+
+#### Table of Contents
+- Introduction
+- Integers: Data Types
+- Integers: Operations
+- Integers: Constructors and Bases - Lecture
+- Integers: Constructors and Bases - Coding
+- Rational Numbers - Lecture
+- Rationals Numbers - Coding
+- Floats: Internal Representations - Lecture
+- Floats: Internal Representations - Coding
+- Floats: Equality Testing - Lecture
+- Floats: Equality Testing - Coding
+- Floats: Coercing to Integers - Lecture
+- Floats: Coercing to Integers - Coding
+- Floats: Rounding - Lecture
+- Floats: Rounding - Coding
+- Decimals - Lecture
+- Decimals - Coding
+- Decimals: Constructors and Contexts - Lecture
+- Decimals: Constructors and Contexts - Coding
+- Decimals: Math Operations - Lecture
+- Decimals: Math Operations - Coding
+- Decimals: Performance Considerations
+- Complex Numbers - Lecture
+- Complex Numbers - Coding
+- Booleans
+- Booleans: Truth Values - Lecture
+- Booleans: Truth Values - Coding
+- Booleans: Precedence and Short-Circuiting - Lecture
+- Booleans: Precedence and Short-Circuiting - Coding
+- Booleans: Boolean Operators - Lecture
+- Booleans: Boolean Operators - Coding
+- Comparison Operators
