@@ -1,22 +1,25 @@
 import os
 
 sessions = [
-    "Introduction",
-    "A Quick Refresher - Basic Review",
-    "Variables and Memory",
-    "Numeric Types",
-    "Function Parameters",
-    "First-Class Functions",
-    "Scopes, Closures and Decorators",
-    "Tuples as Data Structures and Named Tuples",
-    "Modules, Packages and Namespaces",
-    "Python Updates",
-    "Extras"
+    "Getting Started",
+    "The Angular Frontend - Understanding the Basics",
+    "Adding NodeJS to our Project",
+    "Working with MongoDB",
+    "Enhancing the App",
+    "Adding Image Uploads to our App",
+    "Adding Pagination",
+    "Adding User Authentication",
+    "Authorization",
+    "Handling Errors",
+    "Optimizations",
+    "Deploying our App",
+    "Course Roundup",
 ]
 
 for i in range(len(sessions)):
     name = sessions[i]
-    folder_name = name.replace(" ", "_").lower()
+    folder_name = name.replace(" - ", "_").replace(": ", "_")
+    folder_name = folder_name.replace(" ", "_").lower()
     i += 1
     if i < 10:
         i = f"0{i}"
