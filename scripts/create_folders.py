@@ -2,18 +2,19 @@ import os
 
 sessions = [
     "Getting Started",
-    "The Angular Frontend - Understanding the Basics",
-    "Adding NodeJS to our Project",
-    "Working with MongoDB",
-    "Enhancing the App",
-    "Adding Image Uploads to our App",
-    "Adding Pagination",
-    "Adding User Authentication",
-    "Authorization",
-    "Handling Errors",
-    "Optimizations",
-    "Deploying our App",
-    "Course Roundup",
+    "Statistics and Probability Refresher",
+    "Predictive Models",
+    "Machine Learning with Python",
+    "Recommender Systems",
+    "More Data Mining and Machine Learning Techniques",
+    "Dealing with Real-World Data",
+    "Apache Spark: Machine Learning on Big Data",
+    "Experimental Design ML in the Real World",
+    "Deep Learning and Neural Networks",
+    "Generative Models",
+    "Generative AI: GPT, ChatGPT, Transformers and More",
+    "The OpenAI API",
+    "Final Project",
 ]
 
 for i in range(len(sessions)):
