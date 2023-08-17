@@ -184,24 +184,124 @@ Refer to `distributions.py` for coding exercises.
 - Example: income distribution
 - Example: percentiles in a normal distribution
 
+Refer to `percentiles.py` for coding exercises.
+
+
+#### Moments
+- Quantitative measures of the shape of a probability density function
+- Mathematically they are a bit hard to wrap your head around:
+
+  $\mu_n = \int^\infty_{-\infty} (x-c)^n f(x) dx$ (for moment $n$ around value $c$)
+- But intuitively, it's a lot simpler in statistics.
+
+#### The first moment is the mean
+
+#### The second moment is the variance
+
+#### The third moment is "skew" ($\gamma$)
+- How "lopsided" is the distribution?
+- A distribution with a longer tail on the left will be skewed left, and have a negative skew.
+
+![Skew Moment](https://github.com/lcycstudio/python/blob/master/data_structures/02_statistics_and_probability_refresher/skew.png)
+
+
+#### The fourth moment is "kurtosis"
+- How thick the tail, and how sharp is the peak, compared to a normal distribution?
+- Example: higher peaks have higher kurtosis
 
 Refer to `percentiles.py` for coding exercises.
 
 
 ### A Crash Course in matplotlib
 
+Refer to `matplotlib_.py` for coding exercises.
 
 ### Advanced Visualization with Seaborn
+
+Refer to `seaborn_.py` for coding exercises.
+
 
 
 ### Covariance and Correlation
 
+#### Covariance
+- Measures how two variables vary in tandem from their means.
+- a scatterplot of random numbers vs a linear plot of straight line
+
+#### Measuring covariance
+- Think of the data sets for the two variables as high-dimensional vectors
+- Convert these to vectors of variances from the mean
+- Take the dot product (cosine of the angle between them) of the two vectors
+- Divide by the sample size
+
+#### Intepreting covariance is hard
+- We know a small covariance, close to 0, means there isn't much correlation
+  between the two variables.
+- And large covariances - that is, far from 0 (could be negative for inverse
+  relationships) mean there is a correlation
+- But how large is "large"?
+
+#### That's where the correlation comes in!
+- Just divide the covariance by the standard deviations of both variables,
+  and that normalizes things.
+- So a correlation of -1 means a perfect inverse correlation
+- Correlation 0: no correlation
+- COrrelation 1: perfect correlation
+
+#### Remember: correlation does not imply causation!
+- Only a controlled, randomized experiment can give you insights on causation.
+- Use correlation to decide what experiments to conduct!
+
+Refer to `covariance.py` for coding exercises.
+
+
 
 ### Conditional Probability
 
+#### Conditional Probability
+- If I have two events that depend on each other, what's the probability that both
+  with occur?
+- Notation: P(A, B) is the probability of A and B both occurring
+- P(B, A) is the probability of B given A has occurred
+- The formula:
+$$P(B, A) = \frac{P(A, B)}{P(A)}$$
 
-### Exercise Solution: Conditional Probability of Purchase by Age
+#### Example 1
+- I give my students two tests. 60% of my students passed both tests, but the first
+  test was easier -- 80% passed that one. What percentage of students who passed the
+  first test also passed the second?
+- A = passing the first test, B = passing the second test
+- So we are looking for P(B|A) -- the probability of B given A
+$$P(B|A) = \frac{P(A,B)}{P(A)} = \frac{0.6}{0.8} = 0.75$$
+- 75% of students who passed the first test passed the second.
+
+Refer to `probability.py` for coding exercises.
 
 
 ### Bayes' Theorem
 
+$$P(A|B) = \frac{P(A)P(B|A)}{P(B)}$$
+
+- It is the probability of A given B is the probability of A times the probability 
+  of B given A over the probability of B.
+- The key insight is that the probability of something that depends on B depends
+  very much on the base probability of B and A. People ignore this all the time.
+
+#### Bayes' Theorem to the rescue
+- Drug testing is a common example. Even a "highly accurate" drug test can produce
+  more false positives than true positives.
+- Let's say we have a drug test that can accurately identify users of a drug 99% of
+  the time, and accurately has a negative result for 99% of non-users. But only 
+  0.3% of the overall population actually uses this drug.
+- Event A is a user of the drug, and Event B is the tested positively for the drug.
+- P(A) = 0.003, the overall population actually uses this drug
+- P(B|A) = 0.99, the probability of testing positive given the users do drugs
+- We can work out from this information that P(B) is the probability of testing 
+  positive if you do use, plus the probability of testing positive if you don't
+  $$P(B) = P(B|A) * P(A) + (1 - P(B|A)) * (1 - P(A))$$
+  $$= 0.99 * 0.003 + 0.01 * 0.97 = 0.013$$
+- The probability of users who use drugs given that they are tested positively P(A|B)
+  $$P(A|B) = \frac{P(A)P(B|A)}{P(B)} = \frac{0.003 * 0.99}{0.013} = 0.228$$
+- So the odds of someone being an actual user of the drug given that they tested
+  positive is only 22.8%!
+- Even though P(B|A) is high (99%), it doesn't mean P(A|B) is high.
