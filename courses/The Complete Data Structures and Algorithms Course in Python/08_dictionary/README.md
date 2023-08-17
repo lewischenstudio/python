@@ -43,7 +43,7 @@ A **hash table** is a way of doing **key-value lookups**. You store the values i
 use a **hash function** to find the index of the array cell that corresponds to your key-value pair.
 
 
-![N Queens Problem](https://github.com/lcycstudio/python/tree/master/data_structures/08_dictionary/hash_function.png)
+![N Queens Problem](https://github.com/lcycstudio/python/blob/master/data_structures/08_dictionary/hash_function.png)
 
 
 

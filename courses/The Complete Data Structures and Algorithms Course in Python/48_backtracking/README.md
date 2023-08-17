@@ -32,7 +32,7 @@ There are 3 types of problems in backtracking:
 
 #### State Space Tree
 
-![State Space Tree](https://github.com/lcycstudio/python/tree/master/data_structures/48_backtracking/state_space_tree.png)
+![State Space Tree](https://github.com/lcycstudio/python/blob/master/data_structures/48_backtracking/state_space_tree.png)
 
 
 Steps in backtracking
@@ -42,7 +42,7 @@ Steps in backtracking
 
 **Example** 3! = 6
 
-![SST Example](https://github.com/lcycstudio/python/tree/master/data_structures/48_backtracking/sst_example.png)
+![SST Example](https://github.com/lcycstudio/python/blob/master/data_structures/48_backtracking/sst_example.png)
 
 
 
@@ -56,7 +56,7 @@ We are searching all available states to find the solution for the problem.
 
 We are eliminating invalid solutions and find the next best solution.
 
-![Backtracking vs Brute Force](https://github.com/lcycstudio/python/tree/master/data_structures/48_backtracking/backtracking_brute_force.png)
+![Backtracking vs Brute Force](https://github.com/lcycstudio/python/blob/master/data_structures/48_backtracking/backtracking_brute_force.png)
 
 
 ### Backtracking Questions
@@ -80,7 +80,7 @@ attack each other.
 - Not same row
 - Not diagonal
 
-![N Queens Problem](https://github.com/lcycstudio/python/tree/master/data_structures/48_backtracking/n_queens_problem.png)
+![N Queens Problem](https://github.com/lcycstudio/python/blob/master/data_structures/48_backtracking/n_queens_problem.png)
 
 
 #### Steps

@@ -75,7 +75,7 @@ It is an array with a bunch of values having been declared with triple index.
 
 ### Arrays in Memory
 
-![Arrays in Memory](https://github.com/lcycstudio/python/tree/master/data_structures/03_arrays/array_in_memory.png)
+![Arrays in Memory](https://github.com/lcycstudio/python/blob/master/data_structures/03_arrays/array_in_memory.png)
 
 
 

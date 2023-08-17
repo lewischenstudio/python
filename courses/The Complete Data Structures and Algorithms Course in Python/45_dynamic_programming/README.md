@@ -173,7 +173,7 @@ def fibonacciTab(n):
 | When to use      | Need a quick solution           | Need an efficient solution |
 
 
-![Big O Complexity](https://github.com/lcycstudio/python/tree/master/data_structures/45_dynamic_programming/big_o_complexity.png)
+![Big O Complexity](https://github.com/lcycstudio/python/blob/master/data_structures/45_dynamic_programming/big_o_complexity.png)
 
 
 
@@ -185,7 +185,7 @@ def fibonacciTab(n):
 1. Yes, it does.
 2. No, it doesn't. Not all subproblems are overlapping or repeating the same format.
 
-![Merge Sort DP](https://github.com/lcycstudio/python/tree/master/data_structures/45_dynamic_programming/merge_sort.png)
+![Merge Sort DP](https://github.com/lcycstudio/python/blob/master/data_structures/45_dynamic_programming/merge_sort.png)
 
 
 
@@ -308,7 +308,7 @@ findMinOperation(s1, s2, index1, index2, memo):
     return memo[dictKey]
 ```
 
-![String Conversion DP](https://github.com/lcycstudio/python/tree/master/data_structures/45_dynamic_programming/string_conversion_dp.png)
+![String Conversion DP](https://github.com/lcycstudio/python/blob/master/data_structures/45_dynamic_programming/string_conversion_dp.png)
 
 
 
