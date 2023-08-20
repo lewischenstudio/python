@@ -6,8 +6,12 @@ line-profiler
 matplotlib
 memory-profiler
 numexpr
+numpy
 pandas
 patricia-trie
 psutil
 pytest
 pytest-benchmark
+scikit-learn
+statsmodels
+xlrd

@@ -45,7 +45,7 @@ area = min(a, b) * (bi - ai)
 - Find the area at the current pointers positions
 - Update max_area 
 - Move the pointer pointing to the smaller value for a shot at a bigger area
-- Loop as long as the left pointer is left pointer is smaller than the right pointer
+- Loop as long as the left pointer is smaller than the right pointer
 
 ```
 l = 0

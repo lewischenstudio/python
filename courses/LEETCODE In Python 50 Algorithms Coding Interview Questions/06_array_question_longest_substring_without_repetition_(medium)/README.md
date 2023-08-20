@@ -13,6 +13,7 @@
 Given a string s, find the length of the longest substring without repeating
 characters.
 
+[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 #### Steps
 - We can start from each character and find the longest substring 
