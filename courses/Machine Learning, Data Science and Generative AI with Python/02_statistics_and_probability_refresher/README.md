@@ -202,7 +202,7 @@ Refer to `percentiles.py` for coding exercises.
 - How "lopsided" is the distribution?
 - A distribution with a longer tail on the left will be skewed left, and have a negative skew.
 
-![Skew Moment](https://github.com/lcycstudio/python/blob/master/data_structures/02_statistics_and_probability_refresher/skew.png)
+![Skew Moment](https://github.com/lcycstudio/python/blob/master/courses/Machine%20Learning%2C%20Data%20Science%20and%20Generative%20AI%20with%20Python/02_statistics_and_probability_refresher/skew.png)
 
 
 #### The fourth moment is "kurtosis"

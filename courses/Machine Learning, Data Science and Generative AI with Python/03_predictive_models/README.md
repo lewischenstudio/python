@@ -7,7 +7,6 @@
 - Multi-Level Models
 
 
-
 ### Linear Regression
 
 #### Linear Regression

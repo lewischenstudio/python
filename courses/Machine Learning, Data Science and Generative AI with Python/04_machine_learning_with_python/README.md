@@ -69,7 +69,7 @@
 - Or due to random chance your train and test sets look remarkably similar
 - Overfitting can still happen
 
-![Infallible](https://github.com/lcycstudio/python/blob/master/data_structures/04_machine_learning_with_python/infallible.png)
+![Infallible](https://github.com/lcycstudio/python/blob/master/courses/Machine%20Learning%2C%20Data%20Science%20and%20Generative%20AI%20with%20Python/04_machine_learning_with_python/infallible.png)
 
 
 #### K-fold Cross Validation
@@ -81,6 +81,8 @@
     test set
   - Take the average of the K-1 r-squared scores
 
+
+Refer to `train_test.py` for coding exercises.
 
 
 ### Using Train/Test to Prevent Overfitting a Polynomial Regression
