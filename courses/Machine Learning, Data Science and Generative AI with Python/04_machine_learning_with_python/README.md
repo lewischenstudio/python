@@ -82,18 +82,45 @@
   - Take the average of the K-1 r-squared scores
 
 
-Refer to `train_test.py` for coding exercises.
-
 
 ### Using Train/Test to Prevent Overfitting a Polynomial Regression
 
+Refer to `train_test.py` for coding exercises.
 
 
 ### Bayesian Methods: Concepts
 
+#### Remember Bayes' Theorem
+- $P(A|B) = \frac{P(A)P(B|A)}{P(B)}$
+- Let's use it for machine learning! I want a spam classifier.
+- Example: how would we express the probability of an email being spam if it 
+  contains the word "free"?
+- $P(Spam|Free) = \frac{P(Spam)P(Free|Spam)}{P(Free)}$
+- The numerator is the probability of a message being spam and containing the word
+  "free" (this is subtly different from what we're looking for)
+- The denominator is the overall probability of an email containing the word "free".
+  This is equivalent to $P(Free|Spam)P(Spam) + P(Free|Not Spam)P(Not Spam)$.
+- So together, this ratio is the percentage of emails with the word "free" that are spam.
+
+#### What about all other words?
+- We can construct $P(Spam | Word)$ for every meaningful word we encounter during training
+- Then multiply these together when analyzing a new email to get the probability of it 
+  is being spam.
+- Assumes the presence of different words are independent of each other -- one reason this
+  is called "Naive Bayes".
+
+#### Sounds like a lot of work
+- Scikit-learn to the rescue!
+- The CountVectorizer lets us operate on lots of words at once, and MultinominalNB does all
+  the heavy lifting on Naive Bayes.
+- We'll train it on known sets of spam and "ham" (non-spam) emails
+  - So this is supervised learning
+
 
 
 ### Implementing a Spam Classifier with Naive Bayes
+
+Refer to `naive_bayes.py` for coding exercises.
 
 
 
