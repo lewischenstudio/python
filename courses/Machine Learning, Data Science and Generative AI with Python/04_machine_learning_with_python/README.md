@@ -126,34 +126,115 @@ Refer to `naive_bayes.py` for coding exercises.
 
 ### K-Means Clustering
 
+#### K-Means Clustering
+- Attempts to split data into K groups that are closest to K centroids
+- Unsupervised learning -- uses only the positions of each data point
+- Can uncover interesting groupings of people / things / behavior
+  - Example: Where do millionaires live?
+  - What genres of music / movie / book / etc. naturally fall out of data?
+  - Create your own stereotypes from demographic data
+- Sounds fancy! Wow! Unsupervised machine learning!
+- Actually how it works is really simple.
+  - Randomly pick K centroids (k-means)
+  - Assign each data point to the centroid it is closest to 
+  - Recompute the centroids based on the average position of each centroid's points
+  - Iterate until points stop changing assignment to centroid
+- If you want to predict the cluster for new points, just find the centroid they're
+  closest to.
+
+
+![K-Means](https://github.com/lcycstudio/python/blob/master/courses/Machine%20Learning%2C%20Data%20Science%20and%20Generative%20AI%20with%20Python/04_machine_learning_with_python/k-means.png)
+
+
+#### K-Means Clustering Gotchas
+- Choosing K
+  - Try increasing K values until you stop getting large reductions in squared
+    error (distances from each point to their centroids)
+- Avoiding local minima
+  - The random choice of initial centroids can yield different results
+  - Run it a few times just to make sure your initial results aren't wacky
+- Labeling the clusters
+  - K-Means does not attempt to assign any meaning to the clusters you find
+  - It's up to you to dig into the data and try to determine that meaning
+- `scikit-learn` is awesome for this.
 
 
 ### Clustering people based on income and age
 
+Refer to `k-means.py` for coding exercises.
 
 
 ### Measuring Entropy
 
+#### Entropy
+- A measure of data set's disorder -- how same or different it is.
+- If we classify data set into N different classes (example: a data
+  set of animal attributes and their species)
+  - The entropy is 0 if all of the classes in the data are the same
+    (everyone is an iguana)
+  - The entropy is high if they are all different
 
+#### Computing Entropy
+- $H(S) = -p_1 ln p_1 - ... - p_n ln p_n$
+- $p_i$ represents the proportion of the data labeled for each class
+- Each term looks like the image below
 
-### WINDOWS: Installing Graphviz
-
-
-
-### MAC: Installing Graphviz
-
-
-
-### LINUX: Installing Graphviz
-
+![Entropy](https://github.com/lcycstudio/python/blob/master/courses/Machine%20Learning%2C%20Data%20Science%20and%20Generative%20AI%20with%20Python/04_machine_learning_with_python/entropy.png)
 
 
 ### Decision Trees: Concepts
 
+#### Decision Trees
+- You can actually construct a flowchart to help you decide a classification for something with
+  machine learning 
+- This is called a **Decision Tree** 
+- Another form of supervised learning
+  - Give it some sample data and the resulting classifications
+  - Out comes a tree!
+
+#### Decision Tree Example
+- You want to build a system to filter out resumes based on historical hiring data
+- You have a database of some important attributes of job candidates, and you know
+  which ones were hired and which ones weren't
+- You can train a decision tree on this data, and arrive at a system for predicting 
+  whether a candidate will get hired based on it!
+
+#### Totally Fabricated Hiring Data
+
+| **Candidate ID** | **Years of Exp** | **Employed** | **Ex Employers** | **Education Level** | **Top-tier school** | **Interned** | **Hired** |
+|------------------|------------------|--------------|------------------|---------------------|---------------------|--------------|-----------|
+| 0                | 10               | 1            | 4                | 0                   | 0                   | 0            | 1         |
+| 1                | 0                | 0            | 0                | 0                   | 1                   | 1            | 1         |
+| 2                | 7                | 0            | 6                | 0                   | 0                   | 0            | 0         |
+| 3                | 2                | 1            | 1                | 1                   | 1                   | 0            | 1         |
+| 4                | 20               | 0            | 2                | 2                   | 1                   | 0            | 0         |
+
+
+![Decision Trees](https://github.com/lcycstudio/python/blob/master/courses/Machine%20Learning%2C%20Data%20Science%20and%20Generative%20AI%20with%20Python/04_machine_learning_with_python/trees.png)
+
+
+#### How Decision Trees Work
+- At each step, find the attribute we can use to partition the data set to minimize the
+  _entropy_ of the data at the next step
+- Fancy term for this simple algorithm: ID3
+- It is a [greedy algorithm](https://github.com/lcycstudio/python/tree/master/courses/The%20Complete%20Data%20Structures%20and%20Algorithms%20Course%20in%20Python/43_greedy)
+  -- as it goes down the tree, it just picks the decision that reduce entropy the most
+  at that stage.
+- That might not actually result in an optimal tree, but it works.
+- `scikit-learn` is awesome for this.
+
+#### Random Forests
+- Decision trees are very susceptible to overfitting
+- To fight this, we can construct several decision trees and let them "vote" on the final
+  classification
+  - Randomly re-sample the input data for each tree 
+    (fancy term for this: bootstrap aggregating or bagging)
+  - Randomize a subset of the attributes each step is allowed to choose from
 
 
 ### Decision Trees: Predicting Hiring Decisions
 
+Refer to `trees.py` for coding exercises.
 
 
 ### Ensemble Learning

@@ -1,4 +1,4 @@
-"""Naive Bayes"""
+"""Implementing a Spam Classifier with Naive Bayes"""
 
 import os
 import io
