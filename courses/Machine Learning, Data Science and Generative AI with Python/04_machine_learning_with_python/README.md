@@ -239,15 +239,103 @@ Refer to `trees.py` for coding exercises.
 
 ### Ensemble Learning
 
+#### Ensemble Learning
+- Randome forests was an example of _ensemble learning_
+- It just means we use multiple models to try and solve the same problem and let them vote
+  on the results.
+- Random Forests uses _bagging_ (bootstrap aggregating) to implement ensemble learning.
+  - Many models are built by training on randomly-drawn subsets of the data
+- _Boosting_ is an alternative technique where each subsequent model in the ensemble boosts
+  attributes that address data mis-classified by the previous model
+- A _bucket of models_ trains several different models using training data, and picks the
+  one that works best with the test data
+- _Stacking_ runs multiple models at once on the data, and combines the results together
+  - This is how the Neflix prize was won!
+
+
+#### Advanced Ensemble Learning: Ways to Sound Smart
+- Bayes Optimal Classifier
+  - Theoretically the best -- but almost always impractical
+- Bayesian Parameter Averaging
+  - Attemps to make BOC practical -- but it's still misunderstood, susceptible to 
+    overfitting, and often outperformed by the simpler bagging approach
+- Bayesian Model Combination
+  - Tries to address all of those problems
+  - But in the end, it's about the same as using cross-validation to find the best
+    combination of models
+    
 
 
 ### XGBoost
+
+#### XGBoost
+- eXtreme Gradient Boosted trees
+- Remember boosting is an ensemble method
+  - Each tree boosts attributes that led to misclassifications of previous tree
+- It is AMAZING
+  - Routinely wins Kaggle competitions
+  - Easy to use
+  - Fast
+  - A good choice for an algorithm to start with
+
+#### Features of XGBoost
+- Regularized boosting (prevents overfitting)
+- Can handle missing values automatically 
+- Parallel processing
+- Can cross-validate at each iteration
+  - Enables early stopping, finding optimal number of iterations
+- Incremental training
+- Can plug in your own optimization objects
+- Tree pruning
+  - Generally results in deeper but optimized trees
+
+#### Using XGBoost
+- Pip install xgboost
+- Also CLI, C++, R, Julia, JVM interfaces
+- It's not just made for `scikit_learn`, so it has its own interface
+  - Uses DMatrix structure to hold features & labels 
+    - Can create this easily from a numpy array though
+  - All parameters passed in via a dictionary
+- Can train, then predict. It's easy.
+
+#### XGBoost Hyperparameters
+- Booster
+  - gbtree or gblinear
+- Objective (i.e., multi: softmax, multi: softprob)
+- Eta (learning rate - adjusts weights on each step)
+- Max_depth (depth of the tree)
+- Min_child_weight
+  - Can control overfitting, but too high will undefit
+- And many others
+
+#### XGBoost
+- It's almost all that you need to know for ML in practical terms, at least
+  for simple classification or regression problems.
+
+Refer to `xg_boost.py` for coding exercises.
 
 
 
 ### Support Vector Machines (SVM) Overview
 
+#### Support Vector Machines
+- Works well for classifying higher-dimensional data (lots of features)
+- Finds higher-dimensional _support vectors_ across which to divide the data.
+  Mathematically, these support vectors define hyperplanes.
+- Uses something called the _kernel trick_ to represent data in higher-dimensional
+  spaces to find hyperplanes that might not be apparent in lower dimensions.
 
+#### Higher dimensions? Hyperplanes?
+- The important point is that SVM's employ some advanced mathematical trickery to 
+  cluster data, and it can handle data sets with lots of features.
+- It's also fairly expensive -- the "kernel trick" is the only thing that makes it possible.
+
+#### Support Vector Classification
+- In practice you'll use something called SVC to classify data using SVM.
+- You can use different "kernels" with SVC. Some will work better than others for a given
+  data set.
+
+![SVM](https://github.com/lcycstudio/python/blob/master/courses/Machine%20Learning%2C%20Data%20Science%20and%20Generative%20AI%20with%20Python/04_machine_learning_with_python/svm.png)
 
 
 
