@@ -1,20 +1,21 @@
 import os
 
 sessions = [
-    "Getting Started",
-    "Statistics and Probability Refresher",
-    "Predictive Models",
-    "Machine Learning with Python",
-    "Recommender Systems",
-    "More Data Mining and Machine Learning Techniques",
-    "Dealing with Real-World Data",
-    "Apache Spark: Machine Learning on Big Data",
-    "Experimental Design ML in the Real World",
-    "Deep Learning and Neural Networks",
-    "Generative Models",
-    "Generative AI: GPT, ChatGPT, Transformers and More",
-    "The OpenAI API",
-    "Final Project",
+    "Welcome",
+    "API Basics",
+    "Web APIs",
+    "gRPC Basics",
+    "Preparing the Environment",
+    "Introducting Our App",
+    "Protobuf",
+    "Building the gRoom Server",
+    "Unary RPC",
+    "Client-side Streaming",
+    "Server-side Streaming",
+    "Bi-Directional Streaming",
+    "Advanced Topics",
+    "gRPC in the Browser",
+    "Conclusion",
 ]
 
 for i in range(len(sessions)):

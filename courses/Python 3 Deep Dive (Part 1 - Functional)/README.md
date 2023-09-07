@@ -2,5 +2,5 @@
 
 ## [Course Link](https://www.udemy.com/course/python-3-deep-dive-part-1/)
 
-## [Course Certificate]()
+## [Course Completion Certificate]()
 
