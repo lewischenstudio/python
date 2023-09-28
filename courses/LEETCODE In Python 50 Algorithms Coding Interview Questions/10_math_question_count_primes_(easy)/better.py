@@ -19,12 +19,14 @@ class Solution:
         for i in range(n):
             if isPrime[i]:
                 primeCount += 1
+                print("i: ", i)
+            print("n: ", n)
 
         return primeCount
 
 
 if __name__ == "__main__":
-    print(Solution().countPrimes(1))
+    # print(Solution().countPrimes(1))
     print(Solution().countPrimes(5))
-    print(Solution().countPrimes(10))
-    print(Solution().countPrimes(17))
+    # print(Solution().countPrimes(10))
+    # print(Solution().countPrimes(17))

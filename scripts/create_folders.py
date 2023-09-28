@@ -1,21 +1,15 @@
 import os
 
 sessions = [
-    "Welcome",
-    "API Basics",
-    "Web APIs",
-    "gRPC Basics",
-    "Preparing the Environment",
-    "Introducting Our App",
-    "Protobuf",
-    "Building the gRoom Server",
-    "Unary RPC",
-    "Client-side Streaming",
-    "Server-side Streaming",
-    "Bi-Directional Streaming",
-    "Advanced Topics",
-    "gRPC in the Browser",
-    "Conclusion",
+    "Introduction",
+    "Understanding Asynchronous vs Synchronous",
+    "Asynchronous Patterns",
+    "Asynchronous Patterns - Callbacks",
+    "Asynchronous Patterns - Promises",
+    "Asynchronous Patterns - Async + Await",
+    "Asynchronous Patterns - Generators",
+    "Event Loops",
+    "Summary",
 ]
 
 for i in range(len(sessions)):
