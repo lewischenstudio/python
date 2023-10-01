@@ -1,6 +1,6 @@
 """
-Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an
-object which may contain nested objects.
+Write a recursive function called nestedEvenSum. Return the sum of all even
+numbers in an object which may contain nested objects.
 
 Step 1: Recursive case - the flow
 nestedEvenSum(obj1) # 6
@@ -13,7 +13,17 @@ Step 3: Unintentional case - the constraint
 - Object only
 """
 
-obj1 = {"outer": 2, "obj": {"inner": 2, "otherObj": {"superInner": 2, "notANumber": True, "alsoNotANumber": "yup"}}}
+obj1 = {
+    "outer": 2,
+    "obj": {
+        "inner": 2,
+        "otherObj": {
+            "superInner": 2,
+            "notANumber": True,
+            "alsoNotANumber": "yup",
+        },
+    },
+}
 
 obj2 = {
     "a": 2,

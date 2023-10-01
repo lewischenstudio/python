@@ -1,5 +1,6 @@
 """
-Write a recursive function called capitalizeFirst. Given an array of strings, capitalize the first letter of each
+Write a recursive function called capitalizeFirst. Given an array of strings,
+capitalize the first letter of each
 string in the array.
 
 Step 1: Recursive case - the flow

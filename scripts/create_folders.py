@@ -1,15 +1,15 @@
 import os
 
 sessions = [
-    "Introduction",
-    "Understanding Asynchronous vs Synchronous",
-    "Asynchronous Patterns",
-    "Asynchronous Patterns - Callbacks",
-    "Asynchronous Patterns - Promises",
-    "Asynchronous Patterns - Async + Await",
-    "Asynchronous Patterns - Generators",
-    "Event Loops",
-    "Summary",
+    "Getting Started with Regular Expressions",
+    "Specifying Characters in Regular Expressions",
+    "Working with Character Sets",
+    "Using Repetition in Regular Expressions",
+    "Using Anchored Expressions",
+    "Working with Alternatives and Groups",
+    "Woring with Unicode",
+    "Applying Regular Expressions",
+    "Conclusion",
 ]
 
 for i in range(len(sessions)):
