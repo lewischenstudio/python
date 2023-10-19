@@ -1,15 +1,15 @@
 import os
 
 sessions = [
-    "Getting Started with Regular Expressions",
-    "Specifying Characters in Regular Expressions",
-    "Working with Character Sets",
-    "Using Repetition in Regular Expressions",
-    "Using Anchored Expressions",
-    "Working with Alternatives and Groups",
-    "Woring with Unicode",
-    "Applying Regular Expressions",
-    "Conclusion",
+    "The Simple Concepts",
+    "Path Element",
+    "Styling",
+    "Viewport",
+    "Document",
+    "Painting",
+    "Paint Servers",
+    "Animations",
+    "Bonus Section",
 ]
 
 for i in range(len(sessions)):
