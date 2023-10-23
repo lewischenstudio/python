@@ -1,9 +1,8 @@
 import os
-import math
 from PIL import Image
 
 
-class ResizeImage:
+class RotateImage:
     def __init__(
         self,
         folder_path: str,
@@ -11,7 +10,6 @@ class ResizeImage:
         files_pattern: str,
         files_ext: str,
         first_index: int,
-        scale: float,
         output_folder: str,
         output_pattern: str,
     ) -> None:
@@ -20,11 +18,10 @@ class ResizeImage:
         self.files_pattern = files_pattern
         self.files_ext = files_ext
         self.first_index = first_index
-        self.scale = scale
         self.output_folder = output_folder
         self.output_pattern = output_pattern
 
-    def resize(self):
+    def rotate(self, angle: float):
         if not os.path.isdir(self.output_folder):
             os.mkdir(self.output_folder)
 
@@ -39,10 +36,15 @@ class ResizeImage:
                 fname,
             )
             foo = Image.open(file_path)
-            x, y = foo.size
-            x2 = math.floor(x * self.scale / 10)
-            y2 = math.floor(y * self.scale / 10)
-            foo = foo.resize((x2, y2))
+            if angle in [90, 180, 270]:
+                if angle == 90:
+                    foo = foo.transpose(Image.ROTATE_90)
+                elif angle == 180:
+                    foo = foo.transpose(Image.ROTATE_180)
+                else:
+                    foo = foo.transpose(Image.ROTATE_270)
+            else:
+                foo = foo.rotate(angle)
             foo.save(
                 os.path.join(
                     self.output_folder,
@@ -55,23 +57,22 @@ class ResizeImage:
                 quality=95,
             )
 
-        print("Successfully resized images")
+        print("Successfully rotated images")
 
 
 if __name__ == "__main__":
-    ResizeImage(
+    RotateImage(
         folder_path=os.path.join(
+            os.getcwd(),
+            "conversion",
+        ),
+        files_num=26,
+        files_pattern="pdf_page_",
+        files_ext="png",
+        first_index=0,
+        output_folder=os.path.join(
             os.getcwd(),
             "rotate",
         ),
-        files_num=26,
-        files_pattern="image_",
-        files_ext="png",
-        first_index=0,
-        scale=6.5,
-        output_folder=os.path.join(
-            os.getcwd(),
-            "resize",
-        ),
-        output_pattern="resize_image_",
-    ).resize()
+        output_pattern="image_",
+    ).rotate(270)

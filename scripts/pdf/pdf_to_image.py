@@ -42,18 +42,15 @@ class PDFToImage:
 
 
 if __name__ == "__main__":
-    PDFToImage(
-        folder_path=os.path.join(
-            os.getcwd(),
-            "my_folder",
-        ),
-        pdf_file="my_file.pdf",
-        output_folder=os.path.join(
-            os.getcwd(),
-            "my_folder",
-            "conversion",
-        ),
-        output_pattern="pdf_page_",
-        output_ext="png",
-        first_index=1,
-    ).convert()
+    for i in range(26):
+        PDFToImage(
+            folder_path=os.path.join(os.getcwd(), "new"),
+            pdf_file=f"{i}.pdf",
+            output_folder=os.path.join(
+                os.getcwd(),
+                "conversion",
+            ),
+            output_pattern="pdf_page_",
+            output_ext="png",
+            first_index=i + 1,
+        ).convert()

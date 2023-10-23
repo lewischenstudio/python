@@ -50,19 +50,15 @@ if __name__ == "__main__":
     ImageToPDF(
         folder_path=os.path.join(
             os.getcwd(),
-            "scripts",
-            "my_file",
             "resize",
         ),
-        files_num=26,
-        files_pattern="resize_pdf_page_",
+        files_num=1,
+        files_pattern="resize_image_",
         files_ext="png",
-        first_index=1,
+        first_index=0,
         output_folder=os.path.join(
             os.getcwd(),
-            "scripts",
-            "my_file",
             "pdfs",
         ),
-        output_pattern="new_pdf_page_",
+        output_pattern="pdf_page_",
     ).convert()
