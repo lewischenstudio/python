@@ -54,8 +54,8 @@ if __name__ == "__main__":
         ),
         files_num=1,
         files_pattern="resize_image_",
-        files_ext="png",
-        first_index=0,
+        files_ext="jpg",
+        first_index=1,
         output_folder=os.path.join(
             os.getcwd(),
             "pdfs",

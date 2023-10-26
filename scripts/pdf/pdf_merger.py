@@ -51,9 +51,9 @@ if __name__ == "__main__":
             os.getcwd(),
             "pdfs",
         ),
-        files_num=26,
+        files_num=2,
         files_pattern="pdf_page_",
-        first_index=0,
+        first_index=1,
         output_folder=os.path.join(
             os.getcwd(),
         ),
