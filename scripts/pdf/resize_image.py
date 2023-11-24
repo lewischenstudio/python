@@ -48,7 +48,7 @@ class ResizeImage:
                     self.output_folder,
                     "{}{}.{}".format(
                         self.output_pattern,
-                        idx + self.first_index,
+                        idx + 1,
                         self.files_ext,
                     ),
                 ),
@@ -67,8 +67,8 @@ if __name__ == "__main__":
         files_num=26,
         files_pattern="image_",
         files_ext="png",
-        first_index=0,
-        scale=6.5,
+        first_index=1,
+        scale=6,
         output_folder=os.path.join(
             os.getcwd(),
             "resize",

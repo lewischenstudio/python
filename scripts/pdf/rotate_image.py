@@ -69,7 +69,7 @@ if __name__ == "__main__":
         files_num=26,
         files_pattern="pdf_page_",
         files_ext="png",
-        first_index=0,
+        first_index=1,
         output_folder=os.path.join(
             os.getcwd(),
             "rotate",

@@ -45,7 +45,7 @@ if __name__ == "__main__":
     for i in range(26):
         PDFToImage(
             folder_path=os.path.join(os.getcwd(), "new"),
-            pdf_file=f"{i}.pdf",
+            pdf_file=f"Scan000{i}.pdf",
             output_folder=os.path.join(
                 os.getcwd(),
                 "conversion",
