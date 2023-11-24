@@ -14,6 +14,14 @@
       "options": {
         "tabWidth": 2
       }
+    },
+    {
+      "files": "*.py",
+      "options": {
+        "tabWidth": 4,
+        "printWidth": 80,
+        "proseWrap": "always"
+      }
     }
   ]
 }
