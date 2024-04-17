@@ -119,10 +119,213 @@ Do all of this in a .py file in Pycharm.
 
 ### indexes and list slicing exercises solutions
 
+```python
+up_by_two = [[0, 2], [4, 6], [8, 10], [12, 14]]
+print(up_by_two[0])
+print(up_by_two[3][1])
+furniture = ["chair", "table", "desk", "lamp", "bed"]
+print(furniture[-5])
+print("Most people own at least " + str(up_by_two[0][1]) + " " + furniture[0] + "s.")
+floats = [0.98, 8.76, 6.54, 4.32]
+print(floats[1:])
+print(floats[1:3])
+print(floats[:2])
+```
+
 ### del and list methods
+
+```python
+planets = ["pluto", "mars", "earth", "venus"]
+del planets[0]
+print(planets)
+```
+
+```python
+planets = ["pluto", "mars", "earth", "venus"]
+planets.remove("pluto")
+planets.remove("urenus")
+print(planets)
+```
+
+#### del vs remove()
+
+```python
+colors = ["blue", "red", "white", "blue", "orange", "blue"]
+colors.remove("blue")
+print(colors)
+```
+
+#### .append()
+
+```python
+pets = ["cat", "dog", "parrot"]
+print(pets)
+pets.append("fish")
+print(pets) # ["cat", "dog", "parrot", "fish"]
+```
+
+#### .inert()
+
+```python
+pets = ["cat", "dog", "parrot"]
+pets.insert(1, "turtle")
+print(pets) # pets = ["cat", "turtle", "dog", "parrot"]
+```
+
+#### .sort()
+
+```python
+num_list = [2.78, 4, -19, 10000, 0]
+print(num_list)
+num_list.sort()
+print(num_list) # [-19, 0, 2, 4, 10000]
+```
+
+#### .index()
+
+```python
+metals = ["copper", "gold", "silver", "iron"]
+print(metals.index("copper"))
+print(metals.index("platinum")) # not found error
+```
+
+```python
+numbers = [4, 3, 2, 1, 0, 1, 2, 3, 4]
+print(numbers.index(3))
+```
+
+```python
+bands = ["Queen", "Led Zeppelin", "The Beatles", "MUSE", "Radiohead"]
+end = bands.pop()
+print(bands)
+print(end)
+```
 
 ### del and list methods exercises
 
+Do all of this in a .py file in Pycharm.
+
+1. Create a variable called arctic_animals and assign it the list
+   `["penguin", "elephant", "polar bear", "walrus", "tiger", "reindeer"]`
+2. Use del to remove "tiger" from the list assigned to arctic_animals.
+3. Use the `.remove()` method to remove the string "elephant" from the list
+   assigned to arctic_animals.
+4. Use the `.append()` method to add the string "arctic fox" to the list
+   arctic_animals.
+5. Use .insert() to insert the string "snowy owl" between the strings "polar
+   bear" and "walrus" inside of arctic_animals.
+6. Use the .sort() method to rearrange the strings in arctic_animals into
+   alphabetical order.
+7. Use print() to display the list assigned to arctic_animals
+8. Use .index() to get the index number of "reindeer" from arctic_animals then
+   print it.
+9. Use .pop() to get the last item from the list arctic_animals then print it.
+
 ### del and list methods exercises solutions
 
-### Strings
+```python
+arctic_animals = ["penguin", "elephant", "polar bear", "walrus", "tiger", "reindeer"]
+del arctic_animals[4]
+arctic_animals.remove("elephant")
+arctic_animals.append("arctic fox")
+arctic_animals.insert(2, "snowy owl")
+arctic_animals.sort()
+print(arctic_animals)
+print(arctic_animals.index("reindeer"))
+print(arctic_animals.pop())
+```
+
+### Lists vs. Strings
+
+Lists = mutable
+
+Strings = immutable
+
+```python
+ex_1 = [1, 2, 3]
+ex_1[1] = 5
+print(ex_1) # [1, 5, 3]
+```
+
+```python
+ex_2 = "123"
+ex_2[1] = 5
+print(ex_2) # error
+ex_2 = "153"
+print(ex_2) # 153
+```
+
+#### Creating new strings from old strings
+
+```python
+ex_3 = "No, you can't."
+ex_4 = "Yes" + ex_3[3:11] + "!"
+print(ex_4)
+```
+
+```python
+ex_5 = 3.14
+ex_6 = "coconut"
+ex_7 = ex_5
+ex_8 = ex_6
+print(ex_7) # 3.14
+print(ex_8) # coconut
+```
+
+```python
+ex_9 = [1, 2, 3, 4, 5]
+ex_10 = ex_9
+ex_10[2] = 4
+print(ex_9)  # [1, 2, 4, 4, 5]
+print(ex_10) # [1, 2, 4, 4, 5]
+# This is because ex_10 and ex_9 are sharing the same computer memory.
+# Changing ex_10 will also change ex_9 because they share the same memory location.
+```
+
+#### Why does Python have references?
+
+```python
+import copy
+ex_12 = [1, 2, 3, 4, 5]
+ex_13 = copy.deepcopy(ex_12) # copy ex_12 to a different memory location
+ex_13[2] = 4
+print(ex_12) # [1, 2, 3, 4, 5]
+print(ex_13) # [1, 2, 4, 4, 5]
+```
+
+```python
+import copy
+ex_12 = [1, 2, 3, 4, 5]
+ex_13 = copy.deepcopy(ex_12) # copy ex_12 to a different memory location
+ex_13[2] = 4
+ex_14 = ex_13
+ex_14[4] = 6
+print(ex_12) # [1, 2, 3, 4, 5]
+print(ex_13) # [1, 2, 4, 4, 6]
+```
+
+#### list line continuation
+
+```python
+ex_15 = ["bush",
+         "fern",
+         "tree",
+         "moss"]
+print(ex_15) # ["bush", "fern", "tree", "moss"]
+```
+
+#### \ line continuation
+
+```python
+ex_16 = 2 + \
+        4 + \
+        1
+print(ex_16)
+ex_17 = "The Emp\
+         ir Strikes\
+         Back"
+print(ex_17) # The Empire Strikes Back
+ex_18 = "hello" + \
+        "world"
+print(ex_18) # hello world
+```
