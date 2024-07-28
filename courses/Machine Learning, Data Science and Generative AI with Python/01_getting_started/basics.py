@@ -1,3 +1,6 @@
+# Importing Modules
+import numpy as np
+
 """Python Basics"""
 
 # Whitespace Is Importan
@@ -12,9 +15,6 @@ for number in listOfNumbers:
 
 print("All done.")
 
-
-# Importing Modules
-import numpy as np
 
 A = np.random.normal(25.0, 5.0, 10)
 print(A)

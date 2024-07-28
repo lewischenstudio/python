@@ -1,18 +1,6 @@
 import os
 
-sessions = [
-    "Introduction",
-    "Python Basics",
-    "Strings Part 1",
-    "Functions",
-    "Flow Control",
-    "Loops",
-    "Strings Part 2",
-    "Lists",
-    "Dictionaries",
-    "Tuples",
-    "Sets",
-]
+sessions = []
 
 for i in range(len(sessions)):
     name = sessions[i]

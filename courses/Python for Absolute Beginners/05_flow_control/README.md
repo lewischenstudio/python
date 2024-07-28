@@ -190,7 +190,7 @@ else:
 
 ### nested if and else statements
 
-<div>
+<div align="center">
 <img src="./nest.png" width="70%"/>
 </div>
 

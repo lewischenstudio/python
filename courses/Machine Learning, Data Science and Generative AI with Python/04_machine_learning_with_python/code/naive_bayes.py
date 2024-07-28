@@ -57,20 +57,30 @@ counts = vectorizer.fit_transform(data["message"].values)
 classifier = MultinomialNB()
 targets = data["class"].values
 classifier.fit(counts, targets)
+# MultinomialNB()
 
 # Try it out
 examples = ["Free Viagra now!!!", "Hi Bob, how about a game of golf tomorrow?"]
 example_counts = vectorizer.transform(examples)
 predictions = classifier.predict(example_counts)
 print("predictions: ", predictions)
+# predictions: array(['spam', 'ham'], dtype='<U4')
 
+
+# Activity
+# Our data set is small, so our spam classifier isn't actually very good. Try running some
+# different test emails through it and see if you get the results you expect.
+# If you really want to challenge yourself, try applying train/test to this spam classifier.
+# See how well it can predict some subset of the ham and spam emails.
 examples = [
     "Your email greeting is one of the first things a reader sees, along with "
     + "your email name and the subject line. The greeting acts as the first "
     + "impression for both the contents of the email and you. ",
     "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"
     + "aliquip ex ea commodo consequat. ",
+    '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Tr...',
 ]
 example_counts = vectorizer.transform(examples)
 predictions = classifier.predict(example_counts)
 print("predictions: ", predictions)
+# predictions:  ['ham' 'spam' 'spam']

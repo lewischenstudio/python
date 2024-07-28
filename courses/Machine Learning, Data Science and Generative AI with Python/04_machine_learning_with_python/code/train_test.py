@@ -5,6 +5,8 @@ import numpy as np
 from pylab import scatter
 from sklearn.metrics import r2_score
 
+# We'll start by creating some data set that we want to build a model for (in this case a polynomial
+# regression):
 np.random.seed(2)
 
 pageSpeeds = np.random.normal(3.0, 1.0, 100)
@@ -14,8 +16,8 @@ purchaseAmount = np.random.normal(50.0, 30.0, 100) / pageSpeeds
 scatter(pageSpeeds, purchaseAmount)
 
 
-# Now we'll split the data in two - 80% of it will be used for "training" our
-# model, and the other 20% for testing it. This way we can avoid overfitting.
+# Now we'll split the data in two - 80% of it will be used for "training" our model, and the other
+# 20% for testing it. This way we can avoid overfitting.
 trainX = pageSpeeds[:80]
 testX = pageSpeeds[80:]
 
@@ -30,9 +32,9 @@ scatter(trainX, trainY)
 scatter(testX, testY)
 
 
-# Now we'll try to fit an 8th-degree polynomial to this data (which is almost
-# certainly overfitting, given what we know about how it was generated!)
-# Let's plot our polynomial against the training data:
+# Now we'll try to fit an 8th-degree polynomial to this data (which is almost certainly overfitting,
+# given what we know about how it was generated!) Let's plot our polynomial against the training
+# data:
 train_x = np.array(trainX)
 train_y = np.array(trainY)
 p4 = np.poly1d(np.polyfit(train_x, train_y, 8))
@@ -57,8 +59,8 @@ plt.plot(xp, p4(xp), c="r")
 plt.show()
 
 
-# the r-squared score on the test data is kind of horrible
-# This tells us that our model isn't all that great
+# The r-squared score on the test data is kind of horrible This tells us that our model isn't all
+# that great
 r2 = r2_score(test_y, p4(test_x))
 print(r2)
 # 0.3001816861144364
@@ -67,3 +69,6 @@ print(r2)
 r2 = r2_score(np.array(trainY), p4(np.array(trainX)))
 print(r2)
 # 0.6427069514693098
+
+# If you're working with a Pandas DataFrame (using tabular, labeled data,) scikit-learn has built-in
+# train_test_split functions to make this easy to do.

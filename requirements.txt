@@ -9,10 +9,14 @@ numexpr
 numpy
 pandas
 patricia-trie
+pdf2image
 psutil
+pypdf
+PyPDF2
 pytest
 pytest-benchmark
 scikit-learn
 statsmodels
+Spire.Presentation
 xgboost
 xlrd
