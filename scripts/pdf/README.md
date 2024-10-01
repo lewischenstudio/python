@@ -1,4 +1,4 @@
-## PDF Reducer
+# PDF Reducer
 
 Occassionally we may want to reduce the size of a PDF file for meeting certain
 requirements. Although the image or file quality will be lowered, it should be
