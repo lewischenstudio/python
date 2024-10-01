@@ -1,5 +1,13 @@
 import os
 from PIL import Image
+from variables import (
+    first_index,
+    image_ext,
+    pdf_file_pattern,
+    pdfs_folder,
+    resize_file_pattern,
+    resize_folder,
+)
 
 
 class ImageToPDF:
@@ -50,15 +58,15 @@ if __name__ == "__main__":
     ImageToPDF(
         folder_path=os.path.join(
             os.getcwd(),
-            "resize",
+            resize_folder,
         ),
-        first_index=1,
-        files_pattern="resize_image_",
+        first_index=first_index,
+        files_pattern=resize_file_pattern,
         files_num=26,
-        files_ext="png",
+        files_ext=image_ext,
         output_folder=os.path.join(
             os.getcwd(),
-            "pdfs",
+            pdfs_folder,
         ),
-        output_pattern="pdf_page_",
+        output_pattern=pdf_file_pattern,
     ).convert()

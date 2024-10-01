@@ -1,5 +1,6 @@
 import os
 from pdf2image import convert_from_path
+from variables import image_ext, pdf_file_pattern, conversion_folder, new_folder
 
 
 class PDFToImage:
@@ -44,13 +45,13 @@ class PDFToImage:
 if __name__ == "__main__":
     for i in range(26):
         PDFToImage(
-            folder_path=os.path.join(os.getcwd(), "new"),
+            folder_path=os.path.join(os.getcwd(), new_folder),
             pdf_file=f"Scan000{i}.pdf",
             output_folder=os.path.join(
                 os.getcwd(),
-                "conversion",
+                conversion_folder,
             ),
-            output_pattern="pdf_page_",
-            output_ext="png",
+            output_pattern=pdf_file_pattern,
+            output_ext=image_ext,
             first_index=i + 1,
         ).convert()

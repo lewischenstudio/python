@@ -1,5 +1,9 @@
 import os
 from PyPDF2 import PdfReader, PdfWriter
+from variables import (
+    new_file_pattern,
+    split_folder,
+)
 
 
 class PDFSplitter:
@@ -46,13 +50,13 @@ if __name__ == "__main__":
     PDFSplitter(
         folder_path=os.path.join(
             os.getcwd(),
-            "my_folder",
+            split_folder,
         ),
         pdf_file="my_file.pdf",
         output_folder=os.path.join(
             os.getcwd(),
-            "my_folder",
+            split_folder,
         ),
-        output_pattern="new_pdf_",
+        output_pattern=new_file_pattern,
         first_index=1,
     )

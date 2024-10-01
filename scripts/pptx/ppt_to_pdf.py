@@ -30,4 +30,4 @@ class PPTXToPDF:
 
 
 if __name__ == "__main__":
-    PPTXToPDF("C:\\Users\\lcyc2\\dev\\python\\scripts\\pptx").convert()
+    PPTXToPDF("").convert()

@@ -9,7 +9,7 @@ class PythonDocument:
         file_path: str = "",
         file_name: str = "",
         header: str = "",
-        input: [] = [],
+        input: list = [],
         delimiter: str = "|",
         file_first: bool = True,
         merge_tables: bool = True,

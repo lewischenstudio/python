@@ -1,6 +1,13 @@
 import os
 import math
 from PIL import Image
+from variables import (
+    image_ext,
+    resize_file_pattern,
+    rotate_file_pattern,
+    resize_folder,
+    rotate_folder,
+)
 
 
 class ResizeImage:
@@ -62,16 +69,16 @@ if __name__ == "__main__":
     ResizeImage(
         folder_path=os.path.join(
             os.getcwd(),
-            "rotate",
+            rotate_folder,
         ),
         files_num=26,
-        files_pattern="image_",
-        files_ext="png",
+        files_pattern=rotate_file_pattern,
+        files_ext=image_ext,
         first_index=1,
         scale=6,
         output_folder=os.path.join(
             os.getcwd(),
-            "resize",
+            resize_folder,
         ),
-        output_pattern="resize_image_",
+        output_pattern=resize_file_pattern,
     ).resize()

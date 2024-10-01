@@ -9,7 +9,7 @@ class PythonDocument:
         file_path: str = "",
         file_name: str = "",
         header: str = "",
-        input: [] = [],
+        input: list = [],
         delimiter: str = "|",
         file_first: bool = True,
         merge_tables: bool = True,
@@ -54,10 +54,10 @@ class PythonDocument:
 
     def read_file(
         self,
-        match_list: [],  # words that are included for the doc
-        remove_list: [],  # words that are removed from inclusion
-        inclusion_list: [] = [],  # the same as match_list by default
-        exclusion_list: [] = [],  # different list matching words excluded
+        match_list: list,  # words that are included for the doc
+        remove_list: list,  # words that are removed from inclusion
+        inclusion_list: list = [],  # the same as match_list by default
+        exclusion_list: list = [],  # different list matching words excluded
         same_file: bool = True,
         output_file: str = "",
     ):
@@ -199,7 +199,7 @@ class PythonDocument:
 if __name__ == "__main__":
     PythonDocument(
         file_path=os.path.join(os.getcwd(), "scripts", "docx"),
-        file_name="my_games.txt",
+        file_name="my_list.txt",
         header="My Games List",
         input=["Hello"],
         delimiter="|",

@@ -1,5 +1,12 @@
 import os
 from PIL import Image
+from variables import (
+    image_ext,
+    pdf_file_pattern,
+    rotate_file_pattern,
+    conversion_folder,
+    rotate_folder,
+)
 
 
 class RotateImage:
@@ -64,15 +71,15 @@ if __name__ == "__main__":
     RotateImage(
         folder_path=os.path.join(
             os.getcwd(),
-            "conversion",
+            conversion_folder,
         ),
         files_num=26,
-        files_pattern="pdf_page_",
-        files_ext="png",
+        files_pattern=pdf_file_pattern,
+        files_ext=image_ext,
         first_index=1,
         output_folder=os.path.join(
             os.getcwd(),
-            "rotate",
+            rotate_folder,
         ),
-        output_pattern="image_",
+        output_pattern=rotate_file_pattern,
     ).rotate(270)

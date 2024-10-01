@@ -1,5 +1,9 @@
 import os
 from pypdf import PdfMerger
+from variables import (
+    pdf_file_pattern,
+    pdfs_folder,
+)
 
 
 class PDFMerger:
@@ -49,10 +53,10 @@ if __name__ == "__main__":
     PDFMerger(
         folder_path=os.path.join(
             os.getcwd(),
-            "pdfs",
+            pdfs_folder,
         ),
         files_num=26,
-        files_pattern="pdf_page_",
+        files_pattern=pdf_file_pattern,
         first_index=1,
         output_folder=os.path.join(
             os.getcwd(),
